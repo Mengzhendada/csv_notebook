@@ -1,0 +1,36 @@
+!    -*- f90 -*-
+! Note: the context of this file is case sensitive.
+
+python module fDSS_ ! in 
+    interface  ! in :fDSS_
+        subroutine fdss(ih,ic,io,x,q2,u,ub,d,db,s,sb,c,b,gl) ! in :fDSS_:fDSS.f
+            integer :: ih
+            integer :: ic
+            integer :: io
+            double precision :: x
+            double precision :: q2
+            double precision :: u
+            double precision :: ub
+            double precision :: d
+            double precision :: db
+            double precision :: s
+            double precision :: sb
+            double precision :: c
+            double precision :: b
+            double precision :: gl
+            double precision :: fini
+            common /fragini/ fini
+        end subroutine fdss
+        function fint(narg,arg,nent,ent,table) ! in :fDSS_:fDSS.f
+            integer :: narg
+            double precision dimension(5) :: arg
+            integer dimension(5) :: nent
+            double precision dimension(63) :: ent
+            double precision dimension(882) :: table
+            double precision :: fint
+        end function fint
+    end interface 
+end python module fDSS_
+
+! This file was auto-generated with f2py (version:1.21.2).
+! See http://cens.ioc.ee/projects/f2py2e/
