@@ -19,4 +19,9 @@ Python notebooks to read RD meas from yield_ratio*.json file and calculate CSV f
 
 -Yield_ratio_morepoints_scipy.ipynb, Yield_ratio_scipy.ipynb: instead of using iminuit to minimize, I used scipy. Not much difference, not updating for a while
 
+#Feb11,2022
+-H2runs.ipynb, read H2 and D2 data from csv_H2.csv, plot diff ratio and sum ratio
 
+#I uploaded several different results_W2Wp2_#_# saves all json and csv file with different W2 and Wp2 cut , by soft link 
+ln -s results_W2Wp2_#_# results
+the above ipynb, yield_ratio_morepoints_pandas.ipynb, CSV_calculation_Q2center.ipynb and H2_runs.ipynb will read the json and csv file from results, and print the result to the results
