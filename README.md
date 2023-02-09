@@ -25,3 +25,10 @@ Python notebooks to read RD meas from yield_ratio*.json file and calculate CSV f
 #I uploaded several different results_W2Wp2_#_# saves all json and csv file with different W2 and Wp2 cut , by soft link 
 ln -s results_W2Wp2_#_# results
 the above ipynb, yield_ratio_morepoints_pandas.ipynb, CSV_calculation_Q2center.ipynb and H2_runs.ipynb will read the json and csv file from results, and print the result to the results
+
+Feb 2023:
+https://www.overleaf.com/project/636946c0ad1728a8c1b0f66f
+-yield_ratio_morepoints_Arho_pandas_combined.ipynb: is the one to fit the data simultaneously to extract both D(z) and CSV(x) using RDmeas equation, using the csv_datasub.csv file in results(soft link to results_W2Wp2_4_2p6_withHGC,I also soft link csv_datasub.csv to csv.csv) 
+-CSV_calculation_Q2center_pandas.ipynb is the one I calculate CSV(x) from different fragmentation ratio input using the RDmeas equation
+-CSV_calculate_newequation_Y.ipynb is the one I calculate CSV(x) from different fragmentation ratio input using the new yield ratio equation, as in the first RY on page 37 in the csv_all slides
+-CSV_calculate_newequation_Y_DSSFF.ipynb calculates CSV(x) from the DSS_FF input, where the CSV is considered in the fragmentation functions, using the function second RY equation on page 37
