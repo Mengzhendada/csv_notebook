@@ -34,7 +34,23 @@
 *            a common block  COMMON / FRAGINI / FINI , and  FINI   *
 *            has always to be zero when DSS is called for the      *
 *            first time or when the SET has been changed.          *
-*                                                                  *
+*   Shuo's change:                                                 *
+*   Updates: To wrap fDSS and use it in python, I modified the     *
+*            fDSS function. The first five variables are the       *
+*            inputs. Same defination for IH, IC,IO, and then       *
+*            kinematic variable x, Q2.                             *
+*            The results are the output, which corresponds to      *
+*            U, UB, D, DB, S, SB, C, B, GL                         *
+*   To use in python:                                              *
+*            D_u^{pi+}LO is fDSS(1,1,0,x,Q2)[0]                    *
+*            D_u^{pi-}LO is fDSS(1,-1,0,x,Q2)[0]                   *
+*            D_d^{pi+}LO is fDSS(1,1,0,x,Q2)[2]                    *
+*   Unlike most of the fragmentation functions, the fDSS doesn't   *
+*   have isospin asymmetry assumed.                                *
+*    For most cases (like some fragmentation functions in lhapdf), *
+*            D_u^{pi+}=D_d^{pi-}=D_ub^{pi-}=D_db^{pi+} (1)         *
+*            D_u^{pi-}=D_d^{pi+}=D_ub^{pi+}=D_db^{pi-} (2)         *
+*    For fDSS, the equation (1) doesn't hold                       *
 ********************************************************************
       SUBROUTINE fDSS (IH,IC,IO, X, Q2, result)
       IMPLICIT DOUBLE PRECISION (A-H,O-Z)
